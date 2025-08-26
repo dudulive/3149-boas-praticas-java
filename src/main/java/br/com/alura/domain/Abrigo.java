@@ -30,11 +30,22 @@ public class Abrigo {
         return telefone;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getEmail() {
         return email;
     }
 
     public Pet[] getPets() {
         return pets;
+    }
+
+    @Override
+    public String toString() {
+        return """
+                     "id":%s,"nome":"%s","telefone":"%s","email":"%s"
+                     """.formatted(this.id, this.nome, this.telefone, this.email);
     }
 }
